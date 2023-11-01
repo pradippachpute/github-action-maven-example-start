@@ -1,0 +1,16 @@
+name: Your Workflow Name
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install Maven
+      uses: yuzhiyongcn/setup-maven@v1.0.0
+      with:
+        maven-version: 3.8.2
